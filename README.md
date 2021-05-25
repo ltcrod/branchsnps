@@ -45,6 +45,7 @@ python define.py -b A B -o E
 ### Future improvements 
 
 * relaxed mode: specifies the minimum ratio of samples being REF (among the outgroups 0s/(0+missing)) or ALT (among the samples of the branch of interest, 1s/(1s+missing)) to consider a SNP to be branch-defining
+* a ```-n``` option to create a file listing all the identified snps instead of just printing it to screen
 
 ### Tips
 
