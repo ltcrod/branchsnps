@@ -1,6 +1,6 @@
 # branchsnps
 
-A simple script to determine the SNPs defining a phylogenetic branch in a uniparental phylogenetic tree
+A simple script to determine the SNPs defining a phylogenetic branch in a uniparental phylogenetic tree and prints them to stdout.
 
 ## Requirements
 * [python](https://www.python.org/)
@@ -27,3 +27,12 @@ A simple script to determine the SNPs defining a phylogenetic branch in a unipar
 
 ## Functioning
 
+![branch](https://github.com/ltcrod/branchsnps/blob/main/pic/treebranch.png)
+
+To determine the SNPs defining branch 1: 
+```
+python define.py -b A B -o C D E
+```
+This will print all the positions shared exclusively by the "A" and "B" taxa. 
+In an ideal scenario without missing data , reversions or recurrent mutations specifying only "C" or "D" as outgroups taxon would be enough. 
+In this example, specifying only "E" as outgroup taxon instead of "C", "D", and "E" would result in the identification of the mutations of both the branches 1 and 3. 
