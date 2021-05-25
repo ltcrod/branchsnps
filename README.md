@@ -34,5 +34,11 @@ To determine the SNPs defining branch 1:
 python define.py -b A B -o C D E
 ```
 This will print all the positions shared exclusively by the "A" and "B" taxa. 
-In an ideal scenario without missing data , reversions or recurrent mutations specifying only "C" or "D" as outgroups taxon would be enough. 
+
+In an ideal scenario without missing data , reversions or recurrent mutations specifying only "C" or "D" as outgroups taxon would be enough to achieve this goal. 
+
 In this example, specifying only "E" as outgroup taxon instead of "C", "D", and "E" would result in the identification of the mutations of both the branches 1 and 3. 
+```
+python define.py -b A B -o E
+```
+
