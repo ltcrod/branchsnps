@@ -17,7 +17,7 @@ A simple script to determine the SNPs defining a phylogenetic branch in a unipar
                         to identify the SNPs defining the branch of interest
                         (tip: the best choice is a sister clade or star*
                         samples) [REQUIRED]
-  -v VCF, --vcf VCF     multiVCF file containing all the samples specified
+  -v VCF, --vcf VCF     input multiVCF file containing all the samples specified
                         [REQUIRED]
   -m {relaxed,conservative}, --mode {relaxed,conservative}
                         conservative: lists only SNPs that are REF in all the
@@ -42,3 +42,11 @@ In this example, specifying only "E" as outgroup taxon instead of "C", "D", and 
 python define.py -b A B -o E
 ```
 
+### Future improvements 
+
+* relaxed mode: specifies the minimum ratio of samples being REF (among the outgroups 0s/(0+missing)) or ALT (among the samples of the branch of interest, 1s/(1s+missing)) to consider a SNP to be branch-defining
+
+### Tips
+
+* If samples are not merged, a multiVCF can be produced with [bcftools merge](http://samtools.github.io/bcftools/bcftools.html#merge)
+* This script is independent from nwk phylogenies. This allows to find shared mutations in all kind of VCF files, and identify new shared mutations in resequenced already-classified samples. Nonetheless, scripts to map SNPs from VCFs to nwk  trees already exist, like [Richard Durbin](https://github.com/richarddurbin)'s [phynder](https://github.com/richarddurbin/phynder).
