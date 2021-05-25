@@ -4,7 +4,7 @@ A simple script to determine the SNPs defining a phylogenetic branch in a unipar
 
 ## Requirements
 * [python](https://www.python.org/)
-* [R language] (https://www.r-project.org/) 
+* [R language](https://www.r-project.org/) 
 
 
 ## Usage
