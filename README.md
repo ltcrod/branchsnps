@@ -52,6 +52,9 @@ python define.py -b A B -o E
 ```
 
 #### Input table example
+
+Outgroups always on the right.
+
 ![inputtable](https://github.com/ltcrod/branchsnps/blob/main/pic/table.png)
 
 
