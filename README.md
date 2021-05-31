@@ -22,7 +22,7 @@ A simple script to determine the SNPs defining a phylogenetic branch in a unipar
   -m {relaxed,conservative}, --mode {relaxed,conservative}
                         conservative: lists only SNPs that are REF in all the
                         outgroup samples; relaxed: lists all the SNPs that are
-                        REF or MISS in the outgroup samples [YET TO BE IMPLEMENTED, default: conservative]
+                        REF or MISS in the outgroup samples [default: conservative]
   -l LISTSAMP, --list LISTSAMP
                         specify a file with a list for both outgroups samples
                         and samples of the branch of interest; the table must
@@ -60,9 +60,10 @@ Outgroups always on the right.
 
 
 
+
 ### Future improvements 
 
-* relaxed mode: specifies the minimum ratio of samples being REF (among the outgroups 0s/(0+missing)) or ALT (among the samples of the branch of interest, 1s/(1s+missing)) to consider a SNP to be branch-defining
+* a clean output for the "-l" option
 
 ### Tips
 
