@@ -16,7 +16,7 @@ echo outgroup samples:
 for i in $(cat tmp/outgroupsamples_1.tmp)
 do
     echo $i
-    echo  -e "\t \t & genotype_numb_df\$___XXXXXX${i}___XXXXXX[y]==0" >> tmp/scriptinthemaking.tmp
+    echo  -e "\t \t & genotype_numb_df\$___XXXXXX${i}___XXXXXX[y]==0 | genotype_numb_df\$___XXXXXX${i}___XXXXXX[y]==___XXXXXXX___XXXXXX" >> tmp/scriptinthemaking.tmp
 done
 
 sed -i 's/___XXXXXX/"/g' tmp/scriptinthemaking.tmp
