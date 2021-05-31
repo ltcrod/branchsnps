@@ -23,7 +23,16 @@ A simple script to determine the SNPs defining a phylogenetic branch in a unipar
                         conservative: lists only SNPs that are REF in all the
                         outgroup samples; relaxed: lists all the SNPs that are
                         REF or MISS in the outgroup samples [YET TO BE IMPLEMENTED, default: conservative]
-```
+  -l LISTSAMP, --list LISTSAMP
+                        specify a file with a list for both outgroups samples
+                        and samples of the branch of interest; the table must
+                        contain two tab delimited columns, the first for the
+                        samples in the branch of interest and the second for
+                        the outgroups; samples should be separated by a comma
+                        and no space. If this option is specified, both -o and
+                        -b will be ignored. See below for the input format
+                        
+ ```
 
 ## Functioning
 
@@ -42,10 +51,15 @@ In this example, specifying only "E" as outgroup taxon instead of "C", "D", and 
 python define.py -b A B -o E
 ```
 
+#### Input table examples
+![inputtable](https://github.com/ltcrod/branchsnps/blob/main/pic/table.png)
+
+
+
+
 ### Future improvements 
 
 * relaxed mode: specifies the minimum ratio of samples being REF (among the outgroups 0s/(0+missing)) or ALT (among the samples of the branch of interest, 1s/(1s+missing)) to consider a SNP to be branch-defining
-* a ```-n``` option to create a file listing all the identified snps instead of just printing it to screen
 
 ### Tips
 
