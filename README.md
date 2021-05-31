@@ -51,7 +51,7 @@ In this example, specifying only "E" as outgroup taxon instead of "C", "D", and 
 python define.py -b A B -o E
 ```
 
-#### Input table examples
+#### Input table example
 ![inputtable](https://github.com/ltcrod/branchsnps/blob/main/pic/table.png)
 
 
